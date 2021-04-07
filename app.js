@@ -21,4 +21,5 @@ app.get('/', async (req, res) => {
 
 app.use('/blog', articleRouter)
 
-app.listen(5000)
+app.listen(process.env.PORT || 3000, 
+  () => console.log("Server is running..."))
